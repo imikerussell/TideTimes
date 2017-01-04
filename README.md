@@ -27,3 +27,62 @@ Next High Tide Height: 3.7
 Next Low Tide: 20:08
 Next Low Tide Height: 1.2
 ```
+
+## Intergration with Home Assistant
+
+Home Assistant is an amazing, open source, home automation platform. If you're into home automation and own a few devices you should think about linking them together inside [Home Assistant](https://home-assistant.io/)!
+
+Here's how TideTimes looks inside Home Assistant:
+
+<img src="https://raw.githubusercontent.com/imikerussell/TideTimes/master/tidetimes.png" width="441" alt="TideTimes works with Home Assistant">
+
+Example sensor setup (using the [Command Line sensor](https://home-assistant.io/components/sensor.command_line/) from Home Assistant):
+
+```
+- platform: command_line
+  name: High Tide Time
+  command: "python /home/hass/TideTimes/tideupdate.py | grep 'Next High Tide:' | sed 's/^.*: //'"
+
+- platform: command_line
+  name: High Tide Height
+  command: "python /home/hass/TideTimes/tideupdate.py | grep 'Next High Tide Height:' | sed 's/^.*: //'"
+  unit_of_measurement: "m"
+  icon: mdi:elevation-rise
+
+- platform: command_line
+  name: Low Tide Time
+  command: "python /home/hass/TideTimes/tideupdate.py | grep 'Next Low Tide:' | sed 's/^.*: //'"
+  icon: mdi:flag-variant
+
+- platform: command_line
+  name: Low Tide Height
+  command: "python /home/hass/TideTimes/tideupdate.py | grep 'Next Low Tide Height:' | sed 's/^.*: //'"
+  unit_of_measurement: "m"
+  icon: mdi:elevation-decline
+```
+
+Example group (to get the sensors in a box of their own):
+
+```
+Tide Times:
+  - sensor.high_tide_time
+  - sensor.high_tide_height
+  - sensor.low_tide_time
+  - sensor.low_tide_height
+```
+
+Example customize (for cool icons):
+
+```
+sensor.high_tide_time:
+  icon: mdi:flag-variant
+
+sensor.high_tide_height:
+  icon: mdi:elevation-rise
+
+sensor.low_tide_time:
+  icon: mdi:flag-outline-variant
+
+sensor.low_tide_height:
+  icon: mdi:elevation-decline
+```
