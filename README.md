@@ -11,7 +11,7 @@ To configure:
 
 Edit the *URL* and *LOCATION* variables. *URL* should point to the [Met Office tide times page](http://www.metoffice.gov.uk/public/weather/tide-times) for your location and *LOCATION* should point to your local installation directory.
 
-In this example the *URL* is set to Ventnor on the Isle of Wight and *LOCATION* is `/home/hass/TideTimes` (so the script may intergrate with [Home Assistant](https://home-assistant.io/)).
+In this example the *URL* is set to St Helens Beach on the Isle of Wight and *LOCATION* is `/home/hass/TideTimes` (so the script may intergrate with [Home Assistant](https://home-assistant.io/)).
 
 To get started:
 
