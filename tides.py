@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-URL = 'http://www.metoffice.gov.uk/public/weather/tide-times/gbzpud0n4'
+URL = 'http://www.metoffice.gov.uk/public/weather/tide-times/gcp0rj2jb'
 LOCATION = '/home/hass/TideTimes'
 
 raw_html = requests.get(URL).text

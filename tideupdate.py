@@ -62,7 +62,7 @@ elif hl == "4":
 			nextlowm = th3
 		else:
 			nextlowtide = tt5
-			nextlowm = tt5
+			nextlowm = th5
 	else:
 		from datetime import datetime, time
 		if datetime.strptime(tt0, FMT) > datetime.strptime(timenow, FMT):
