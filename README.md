@@ -15,9 +15,9 @@ In this example the *URL* is set to St Helens Beach on the Isle of Wight and *LO
 
 To get started:
 
-Set up a cronjob `crontab -e` for a minute after midnight to grab new tide times for the day ahead:
+Set up a cronjob `crontab -e` at 06:00 (as Met Office does not update website at exactly midnight) to grab new tide times for the day ahead:
 
-```1 0 * * * * /usr/bin/python /home/hass/TideTimes/tides.py```
+```0 6 * * * * /usr/bin/python /home/hass/TideTimes/tides.py```
 
 Test it! Run `python tideupdate.py` and check for an output like this:
 
