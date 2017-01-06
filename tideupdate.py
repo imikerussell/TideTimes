@@ -9,7 +9,7 @@ if hl == "3":
 		from datetime import datetime, time
 		now = datetime.now()
 		now_time = now.time()
-		if now_time >= time(0,00) and now_time <= time(6,00):
+		if now_time >= time(0,00) and now_time <= time(6,05):
 			if datetime.strptime(tt4, FMT) > datetime.strptime(timenow, FMT):
 				nextlowtide = tt3
 				nextlowm = th3
@@ -39,7 +39,7 @@ if hl == "3":
 		from datetime import datetime, time
 		now = datetime.now()
 		now_time = now.time()
-		if now_time >= time(0,00) and now_time <= time(6,00):
+		if now_time >= time(0,00) and now_time <= time(6,05):
 			if datetime.strptime(tt4, FMT) > datetime.strptime(timenow, FMT):
 				nexthightide = tt3
 				nexthighm = th3
