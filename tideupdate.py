@@ -1,5 +1,6 @@
 import time
 from tidestore import *
+from tidestorex import *
 
 if hl == "3":
 	# 3 tide times today
@@ -9,15 +10,15 @@ if hl == "3":
 		from datetime import datetime, time
 		now = datetime.now()
 		now_time = now.time()
-		if now_time >= time(0,00) and now_time <= time(6,05):
-			if datetime.strptime(tt4, FMT) > datetime.strptime(timenow, FMT):
-				nextlowtide = tt3
-				nextlowm = th3
+		if now_time >= time(0,00) and now_time <= time(6,02):
+			if datetime.strptime(ttx4, FMT) > datetime.strptime(timenow, FMT):
+				nextlowtide = ttx3
+				nextlowm = thx3
 			else:
-				nextlowtide = tt5
-				nextlowm = th5
-			nexthightide = tt4
-			nexthighm = th4
+				nextlowtide = ttx5
+				nextlowm = thx5
+			nexthightide = ttx4
+			nexthighm = thx4
 		else:
 			from datetime import datetime, time
 			if datetime.strptime(tt0, FMT) > datetime.strptime(timenow, FMT):
@@ -39,15 +40,15 @@ if hl == "3":
 		from datetime import datetime, time
 		now = datetime.now()
 		now_time = now.time()
-		if now_time >= time(0,00) and now_time <= time(6,05):
-			if datetime.strptime(tt4, FMT) > datetime.strptime(timenow, FMT):
-				nexthightide = tt3
-				nexthighm = th3
+		if now_time >= time(0,00) and now_time <= time(6,02):
+			if datetime.strptime(ttx4, FMT) > datetime.strptime(timenow, FMT):
+				nexthightide = ttx3
+				nexthighm = thx3
 			else:
-				nexthightide = tt5
-				nexthighm = th5
-			nextlowtide = tt4
-			nextlowm = th4
+				nexthightide = ttx5
+				nexthighm = thx5
+			nextlowtide = ttx4
+			nextlowm = thx4
 		else:
 			if datetime.strptime(tt0, FMT) > datetime.strptime(timenow, FMT):
 				nextlowtide = tt0
@@ -72,15 +73,15 @@ elif hl == "4":
 		from datetime import datetime, time
 		now = datetime.now()
 		now_time = now.time()
-		if now_time >= time(0,00) and now_time <= time(6,00):
-			if datetime.strptime(tt4, FMT) > datetime.strptime(timenow, FMT):
-				nexthightide = tt4
-				nexthighm = th4
+		if now_time >= time(0,00) and now_time <= time(6,02):
+			if datetime.strptime(ttx4, FMT) > datetime.strptime(timenow, FMT):
+				nexthightide = ttx4
+				nexthighm = thx4
 			else:
-				nexthightide = tt6
-				nexthighm = th6
-			nextlowtide = tt5
-			nextlowm = th5
+				nexthightide = ttx6
+				nexthighm = thx6
+			nextlowtide = ttx5
+			nextlowm = thx5
 		else:
 			if datetime.strptime(tt0, FMT) > datetime.strptime(timenow, FMT):
 				nexthightide = tt0
@@ -104,15 +105,15 @@ elif hl == "4":
 		from datetime import datetime, time
 		now = datetime.now()
 		now_time = now.time()
-		if now_time >= time(0,00) and now_time <= time(6,00):
-			if datetime.strptime(tt4, FMT) > datetime.strptime(timenow, FMT):
-				nextlowtide = tt4
-				nextlowm = th4
+		if now_time >= time(0,00) and now_time <= time(6,02):
+			if datetime.strptime(ttx4, FMT) > datetime.strptime(timenow, FMT):
+				nextlowtide = ttx4
+				nextlowm = thx4
 			else:
-				nextlowtide = tt6
-				nextlowm = th6
-			nexthightide = tt5
-			nexthighm = th5
+				nextlowtide = ttx6
+				nextlowm = thx6
+			nexthightide = ttx5
+			nexthighm = thx5
 		else:
 			if datetime.strptime(tt0, FMT) > datetime.strptime(timenow, FMT):
 				nextlowtide = tt0
