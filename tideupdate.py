@@ -35,7 +35,7 @@ if hl == "3":
 				nextlowm = th1
 			else:
 				nextlowtide = tt3
-				nextlowm = tt3
+				nextlowm = th3
 	else:
 		from datetime import datetime, time
 		now = datetime.now()
