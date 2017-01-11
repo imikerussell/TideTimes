@@ -4,11 +4,13 @@ Simple Python script to get tide times for any UK location and report the next h
 Install dependancies:
 
 ```pip install requests```
+
 ```pip install bs4```
     
 To configure:
 
 ```cp config.py.example config.py```
+
 ```nano config.py```
 
 Edit the *URL* and *LOCATION* variables. *URL* should point to the [Met Office tide times page](http://www.metoffice.gov.uk/public/weather/tide-times) for your location and *LOCATION* should point to your local installation directory.
