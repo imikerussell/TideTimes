@@ -12,19 +12,19 @@ if (data.select('td')[0].text[0:5]) == "High" or (data.select('td')[0].text[0:5]
     hl0 = (data.select('td')[0].text[0:5])
     hl = 1
 else:
-	print "ERROR 0"
+	print ("ERROR 0")
 
 if (data.select('td')[1].text[0:5]) == "High" or (data.select('td')[1].text[0:5]) == "Low":
     hl1 = (data.select('td')[1].text[0:5])
     hl = 2
 else:
-	print "ERROR 1"
+	print ("ERROR 1")
 
 if (data.select('td')[2].text[0:5]) == "High" or (data.select('td')[2].text[0:5]) == "Low":
     hl2 = (data.select('td')[2].text[0:5])
     hl = 3
 else:
-	print "ERROR 2"
+	print ("ERROR 2")
 
 if (data.select('td')[3].text[0:5]) == "High" or (data.select('td')[3].text[0:5]) == "Low":
     hl3 = (data.select('td')[3].text[0:5])
