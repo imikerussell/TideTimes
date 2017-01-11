@@ -73,7 +73,7 @@ elif hl == "4":
 		from datetime import datetime, time
 		now = datetime.now()
 		now_time = now.time()
-		if now_time >= time(0,00) and now_time <= time(6,02):
+		if now_time >= time(0,00) and now_time <= time(6,2):
 			if datetime.strptime(ttx4, FMT) > datetime.strptime(timenow, FMT):
 				nexthightide = ttx4
 				nexthighm = thx4
@@ -105,7 +105,7 @@ elif hl == "4":
 		from datetime import datetime, time
 		now = datetime.now()
 		now_time = now.time()
-		if now_time >= time(0,00) and now_time <= time(6,02):
+		if now_time >= time(0,00) and now_time <= time(6,2):
 			if datetime.strptime(ttx4, FMT) > datetime.strptime(timenow, FMT):
 				nextlowtide = ttx4
 				nextlowm = thx4
@@ -137,6 +137,9 @@ else:
 	# Tide data not present or incorrect
 	print ("ERROR: No tide data present.")
 
+tidelocation = tl
+
+print ("Tide Times Location: %s" % tidelocation)
 print ("Next High Tide: %s" % nexthightide)
 print ("Next High Tide Height: %s" % nexthighm)
 print ("Next Low Tide: %s" % nextlowtide)

@@ -24,10 +24,11 @@ Set up a cronjob `crontab -e` at 06:00 (as Met Office does not update website at
 Test it! Run `python tideupdate.py` and check for an output like this:
 
 ```
-Next High Tide: 03:18
-Next High Tide Height: 3.7
-Next Low Tide: 20:08
-Next Low Tide Height: 1.2
+Tide Times Location: Sandown (Beach)
+Next High Tide: 22:34
+Next High Tide Height: 4.1
+Next Low Tide: 04:11
+Next Low Tide Height: 0.8
 ```
 
 ## Intergration with Home Assistant
@@ -42,6 +43,10 @@ Example sensor setup (using the [Command Line sensor](https://home-assistant.io/
 
 ```
 - platform: command_line
+  name: Tide Times Location
+  command: "python /home/hass/TideTimes/tideupdate.py | grep 'Tide Times Location:' | sed 's/^.*: //'"
+
+- platform: command_line
   name: High Tide Time
   command: "python /home/hass/TideTimes/tideupdate.py | grep 'Next High Tide:' | sed 's/^.*: //'"
 
@@ -49,24 +54,22 @@ Example sensor setup (using the [Command Line sensor](https://home-assistant.io/
   name: High Tide Height
   command: "python /home/hass/TideTimes/tideupdate.py | grep 'Next High Tide Height:' | sed 's/^.*: //'"
   unit_of_measurement: "m"
-  icon: mdi:elevation-rise
 
 - platform: command_line
   name: Low Tide Time
   command: "python /home/hass/TideTimes/tideupdate.py | grep 'Next Low Tide:' | sed 's/^.*: //'"
-  icon: mdi:flag-variant
 
 - platform: command_line
   name: Low Tide Height
   command: "python /home/hass/TideTimes/tideupdate.py | grep 'Next Low Tide Height:' | sed 's/^.*: //'"
   unit_of_measurement: "m"
-  icon: mdi:elevation-decline
 ```
 
 Example group (to get the sensors in a box of their own):
 
 ```
 Tide Times:
+  - sensor.tide_times_loaction
   - sensor.high_tide_time
   - sensor.high_tide_height
   - sensor.low_tide_time
@@ -76,6 +79,9 @@ Tide Times:
 Example customize (for cool icons):
 
 ```
+sensor.tide_times_loaction:
+  icon: mdi:fish
+
 sensor.high_tide_time:
   icon: mdi:flag-variant
 
