@@ -1,9 +1,8 @@
 import requests
 import time
+from config import URL
+from config import LOCATION
 from bs4 import BeautifulSoup
-
-URL = 'http://www.metoffice.gov.uk/public/weather/tide-times/gcp0rj2jb'
-LOCATION = '/home/hass/TideTimes'
 
 raw_html = requests.get(URL).text
 data = BeautifulSoup(raw_html, 'html.parser')

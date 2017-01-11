@@ -1,0 +1,2 @@
+URL = 'http://www.metoffice.gov.uk/public/weather/tide-times/gcp0jv37c'
+LOCATION = '/home/hass/TideTimes'

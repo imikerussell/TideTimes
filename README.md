@@ -3,21 +3,23 @@ Simple Python script to get tide times for any UK location and report the next h
 
 Install dependancies:
 
+```pip install requests```
 ```pip install bs4```
     
 To configure:
 
-```nano tides.py```
+```cp config.py.example config.py```
+```nano config.py```
 
 Edit the *URL* and *LOCATION* variables. *URL* should point to the [Met Office tide times page](http://www.metoffice.gov.uk/public/weather/tide-times) for your location and *LOCATION* should point to your local installation directory.
 
-In this example the *URL* is set to St Helens Beach on the Isle of Wight and *LOCATION* is `/home/hass/TideTimes` (so the script may intergrate with [Home Assistant](https://home-assistant.io/)).
+In this example the *URL* is set to Sandown Beach on the Isle of Wight and *LOCATION* is `/home/hass/TideTimes` (so the script may intergrate with [Home Assistant](https://home-assistant.io/)).
 
 To get started:
 
 Set up a cronjob `crontab -e` at 06:00 (as Met Office does not update website at exactly midnight) to grab new tide times for the day ahead:
 
-```0 6 * * * * /usr/bin/python /home/hass/TideTimes/tides.py```
+```0 6 * * * /usr/bin/python /home/hass/TideTimes/tides.py```
 
 Test it! Run `python tideupdate.py` and check for an output like this:
 
