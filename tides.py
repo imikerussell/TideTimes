@@ -9,7 +9,7 @@ data = BeautifulSoup(raw_html, 'html.parser')
 
 tl = (data.select('h2')[1])
 tl = (tl.encode_contents())
-tl = tl.rstrip(' <span id="displayDate"></span>')
+tl = tl.rstrip(b' <span id="displayDate"></span>')
 
 if (data.select('td')[0].text[0:5]) == "High" or (data.select('td')[0].text[0:5]) == "Low":
     hl0 = (data.select('td')[0].text[0:5])
