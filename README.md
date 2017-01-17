@@ -71,7 +71,7 @@ Example group (to get the sensors in a box of their own):
 
 ```
 Tide Times:
-  - sensor.tide_times_loaction
+  - sensor.tide_times_location
   - sensor.high_tide_time
   - sensor.high_tide_height
   - sensor.low_tide_time
@@ -81,7 +81,7 @@ Tide Times:
 Example customize (for cool icons):
 
 ```
-sensor.tide_times_loaction:
+sensor.tide_times_location:
   icon: mdi:fish
 
 sensor.high_tide_time:
