@@ -33,7 +33,7 @@ Next Low Tide: 04:11
 Next Low Tide Height: 0.8
 ```
 
-## Intergration with Home Assistant
+## Integration with Home Assistant
 
 Home Assistant is an amazing, open source, home automation platform. If you're into home automation and own a few devices you should think about linking them together inside [Home Assistant](https://home-assistant.io/)!
 
